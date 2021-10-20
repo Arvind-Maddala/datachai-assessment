@@ -6,6 +6,9 @@ import './style.css'
 
 const Step2 = () => {
   let {userState, userDispatch} = useContext(userContext);
+  
+  //Routing to Third Page onClick
+
   const history = useHistory();
 
   return (

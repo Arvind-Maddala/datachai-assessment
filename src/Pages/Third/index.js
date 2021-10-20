@@ -1,12 +1,12 @@
-import React, {useContext} from 'react'
-import {userContext} from '../../App';
+import React from 'react'
+import { Step3 } from '../../Components'
 
 const Third = () => {
-  let {userState} = useContext(userContext);
+
 
   return (
-    <div className="third">
-      {JSON.stringify(userState)}
+    <div >
+      <Step3 />
     </div>
   )
 }

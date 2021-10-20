@@ -5,12 +5,10 @@ import {useHistory } from 'react-router-dom';
 const Step1 = () => {
 
   const {userState, userDispatch} = useContext(userContext);
+  //Routing to second Page onClick
   const history = useHistory();
-
   return (
   <>
-
-
 <form>
   <label>
     First Name:

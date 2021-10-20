@@ -3,9 +3,13 @@ import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 import {Home, First, Second, Third} from './Pages'
 import './App.css';
 
-
+//creating context 
 export const userContext = React.createContext();
+
+//Initial state value to pass to Reducer
 const initialState = {firstName:'Awesome',lastName:'Dev', age:2, gender:'male' };
+
+//Reducer function 
 
 const reducer = (state, action) => {
   switch(action.type){
@@ -21,6 +25,8 @@ const reducer = (state, action) => {
         return initialState
   }
 }
+
+
 function App() {
 
   const [state, dispatch] = useReducer(reducer, initialState);
@@ -28,7 +34,6 @@ function App() {
 
    return (
     <div className="App">
-      
       <userContext.Provider value={{userState:state, userDispatch:dispatch}} >
       <Router>
       <Link to="/">Home</Link>
@@ -40,9 +45,6 @@ function App() {
       </Switch>
     </Router>
     </userContext.Provider>
-
- 
-   
     </div>
   );
 }
